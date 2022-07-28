@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
 	int key;
 
 	if (argc != 3) {
-		printf("% s", "Usage: ousa-decrypt-v3 [encrypted file] [output file]\n");
+		printf("% s", "Usage: ousa-decrypt [encrypted file] [output file]\n");
 		exit();
 	}
 
