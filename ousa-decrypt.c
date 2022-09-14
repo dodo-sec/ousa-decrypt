@@ -17,12 +17,13 @@ int main(int argc, char *argv[]) {
 			case 'm':
 				magic = strtol(*++argv, NULL, 16);	//converts user input magic to int hex;
 				printf("Using magic %x\n", magic);
+				argc--;	//decreases argc to account for accessing the next argument (magic value)
 				break;
 			default:
 				break;
 			}
 	
-	if (argc != 3) {	//checks for correct amount of remaining arguments after counting optional flags;
+	if (argc != 2) {	//checks for correct amount of remaining arguments after counting optional flags;
 		printf("%s", "Usage: ousa-decrypt {optional flag} [ENCRYPTED FILE] [OUTPUT FILE]\n\n");
 		printf("%s\t%s", "-h", "show this help menu\n");
 		printf("%s\t%s", "-m", "magic value for key generation (default is 0x161a)\n");
