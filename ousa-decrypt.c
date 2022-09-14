@@ -16,8 +16,8 @@ int main(int argc, char *argv[]) {
 				break;
 			case 'm':
 				magic = strtol(*++argv, NULL, 16);	//converts user input magic to int hex;
-				printf("Using magic %x\n", magic);
-				argc--;	//decreases argc to account for accessing the next argument (magic value)
+				printf("Using magic 0x%x\n", magic);
+				argc--;	//decreases argc to account for accessing the next argument (magic value);
 				break;
 			default:
 				break;
